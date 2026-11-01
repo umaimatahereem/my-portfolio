@@ -12,7 +12,8 @@ const projects = [
     description:
       "An AI-powered sustainability project designed to encourage smarter, more sustainable choices.",
     tags: ["React", "JavaScript", "AI"],
-    link: "",
+    link: "https://loop-wise-ai.vercel.app/",
+    status: "Completed",
   },
   {
     number: "02",
@@ -21,7 +22,8 @@ const projects = [
     description:
       "A productivity app to organize tasks, track progress, and build better daily habits.",
     tags: ["React", "CSS", "Local Storage"],
-    link: "",
+    link: "PASTE_TASKFLOW_VERCEL_URL_HERE",
+    status: "Completed",
   },
   {
     number: "03",
@@ -31,6 +33,7 @@ const projects = [
       "A weather application that presents current conditions and forecasts in a clean interface.",
     tags: ["React", "CSS", "Weather API"],
     link: "",
+    status: "Coming Soon",
   },
 ];
 
@@ -325,8 +328,22 @@ function App() {
   </span>
 </div>
 
-                <h3>{project.name}</h3>
-                <p className="project-description">{project.description}</p>
+               <h3>{project.name}</h3>
+
+<span
+  className={`project-status ${
+    project.status === "Completed" ? "completed" : "upcoming"
+  }`}
+>
+  {project.status}
+</span>
+
+<p>{project.category}</p>
+<p className="project-description">
+  {project.description}
+</p>
+
+
 
                 <div className="tag-list">
                   {project.tags.map((tag) => (
@@ -341,11 +358,11 @@ function App() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    View on GitHub <span>↗</span>
+                    View Live Demo ↗<span>↗</span>
                   </a>
                 ) : (
                   <span className="project-link upcoming">
-                    Project in progress <span>✳</span>
+                    Coming Soon <span>✳</span>
                   </span>
                 )}
               </article>
@@ -377,7 +394,9 @@ function App() {
 
             <a
               className="button button-primary"
-              href="mailto:YOUR_EMAIL@example.com"
+             href="https://mail.google.com/mail/?view=cm&fs=1&to=tahereemumaima@gmail.com"
+target="_blank"
+rel="noopener noreferrer"
             >
               Say hello <span>↗</span>
             </a>
@@ -389,8 +408,14 @@ function App() {
                 rel="noreferrer"
               >
                 GitHub ↗
-              </a>
-              <a href="mailto:YOUR_EMAIL@example.com">Email ↗</a>
+                </a>
+             <a
+  href="https://mail.google.com/mail/?view=cm&fs=1&to=tahereemumaima@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer">
+
+  Email ↗</a>
+
               <a href="#home">Back to top ↑</a>
             </div>
           </div>
